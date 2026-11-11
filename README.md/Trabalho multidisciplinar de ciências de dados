@@ -1,0 +1,74 @@
+Trabalho multidisciplina de IA  e de ciências de dados
+Nome: GERSON ANTONIO DE OLIVEIRA
+Turma: 1ºANO D
+Prof:Angélica
+Colégio: Rodolpho Zaninelli
+
+1. Contexto
+
+Este repositório contém a auditoria técnica e analítica realizada como avaliação individual do 3º trimestre. O projeto aplica conceitos fundamentais da engenharia de software, ciência de dados, machine learning e inteligência artificial generativa aos dilemas apresentados em quatro episódios da série Black Mirror (Joan é Péssima, Volto Já, Toda a Sua História, Hino Nacional) e no documentário O Dilema das Redes.
+
+O objetivo é conectar ferramentas de produção (Python, Pandas, Git, GitHub, Engenharia de Prompts e Métricas Estatísticas) ao entendimento das implicações éticas, matemáticas e sociais dos sistemas inteligentes colocados em produção.
+
+
+
+2. Problema Investigado
+
+A investigação aborda cinco falhas críticas na implementação de sistemas de IA e ciência de dados sem governança:
+
+1. Captura Indiscriminada de Dados e Falta de Guardrails (Joan é Péssima): A geração autônoma de conteúdo em tempo real violando a privacidade e a imagem dos usuários sem consentimento explícito.
+2. Algoritmos de Recomendação Viciantes (O Dilema das Redes): A otimização de engajamento sem limites éticos, gerando bolhas comportamentais e vício digital.
+3. Overfitting e Falha de Generalização (Volto Já): O treinamento de modelos generativos sintéticos baseado unicamente em dados públicos postados em redes sociais, incapazes de reproduzir a complexidade da vida não observada.
+4. Análise de Dados Obsessiva e Viesada (Toda a Sua História): O uso de dados de gravação contínua sem critérios estatísticos, confundindo ruídos/outliers com tendências reais e gerando interpretações precipitadas por viés de confirmação.
+5. Decisões de Alta Pressão sob Incerteza (Crise do Falso Sequestro): Os riscos envolvidos ao fundamentar ações governamentais ou familiares emergenciais em modelos preditivos com baixa confiabilidade (R^2 baixo) e alto erro residual (RMSE).
+
+
+
+3. Dados Analisados
+
+Entradas (X):
+  Históricos comportamentais (cliques, tempo de tela, curtidas e horários de acesso).
+  Rastros digitais públicos (postagens, e-mails, fotos e mensagens de texto).
+Arquivos de sinal de áudio digitalizados para detecção de clonagem de voz sintética.
+Capturas contínuas de biometria, vídeo e áudio ("Grain").
+Saídas (y):
+Previsão de engajamento/retenção do usuário em plataformas.
+Respostas sintéticas textuais, de áudio e comportamentais de agentes/clones de IA.
+Classificação probabilística de chamadas de voz em tempo real (Golpe de IA vs. Chamada Legítima).
+Processamento Técnico:
+  Tratamento no Pandas: Exclusão de colunas contendo informações de identificação pessoal (PII) e anonimização de dados.
+  Normalização Min-Max (fit_transform): Reescalonamento de variáveis para o intervalo [0, 1] a fim de equalizar o peso das features na medição de distâncias.
+  Visualização: Uso de Scatter Plot e Pairplot para identificação visual da relação entre variáveis e separação de outliers.
+
+
+
+4. Solução e Propostas de Guardrails
+
+Engenharia de Prompts & Limites Rígidos
+Implementação de um Prompt de Sistema robusto no motor de IA generativa com 3 guardrails de bloqueio:
+
+1. Bloqueio de PII e Pessoas Reais: Proibição do uso de dados biométricos, nomes ou vozes de indivíduos reais sem consentimento direto autenticado via chave criptográfica.
+2. Normas Anti-Difamação: Interrupção automática da geração de conteúdos visuais ou narrativos que simulem atos ilícitos ou degradantes de pessoas reais.
+3. Isolamento de Dados em Tempo Real (Privacy by Design): Separação estrita entre pipelines de monitoramento e pipelines de renderização narrativa, aceitando apenas agregados estatísticos anonimizados.
+
+Validação de Modelos e Métrica Estatística
+Avaliação estrita dos coeficientes de determinação (R^2) e erro quadrático médio (RMSE) antes da colocação de qualquer modelo preditivo em produção.
+Priorização do aumento da taxa de Recall no modelo de detecção de sequestros para minimizar Falsos Negativos (evitar orientar o não pagamento do resgate quando a vítima está em cativeiro real).
+
+
+
+5. Impacto Ético
+
+Governança no Versionamento (Git/GitHub vs. Grain): O histórico de alterações do sistema de memórias "Grain" funciona como um repositório imutável. Embora o histórico rastreável seja essencial na engenharia de software para auditoria, debugging e rollback, na vida real ele exige Governança de Dados (minimização, controle de acesso e direito ao esquecimento) para impedir vigilância invasiva.
+Prevenção do Trauma Emocional: A inserção de etapas formais de testes de usabilidade (User Testing) e alinhamento (RLHF) evita que produtos digitais causem impactos emocionais negativos nos usuários por recriar a persona pública sem a profundidade humana real.
+Transparência Térmica: O especialista em IA tem a responsabilidade ética de apresentar a margem de erro ao tomar decisões de emergência, evitando que o pânico popular conduza a desastrosas perdas financeiras ou humanas.
+
+
+
+6. Próximos Passos
+
+Finalizar o Caderno de Análise Técnica com a fundamentação de todas as 8 questões avaliativas.
+Executar o script no Google Colab integrando autenticação segura (userdata), variável base_contexto e a função do assistente generativo.
+Realizar os experimentos no Pandas com gráficos de dispersão e modelo de LinearRegression.
+Ensaiar a apresentação do Pitch de Crise de 2 Minutos focado no cenário do falso sequestro por IA.
+Garantir o versionamento contínuo deste repositório no GitHub através de commits descritivos e organizados.
